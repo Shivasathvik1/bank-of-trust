@@ -1,0 +1,549 @@
+.home {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(37, 99, 235, 0.14),
+      transparent 32%
+    ),
+    var(--bg);
+}
+
+
+/* =========================
+   NAV
+========================= */
+
+.home-nav {
+  width: 100%;
+
+  max-width: 1280px;
+
+  height: 86px;
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding:
+    0 32px;
+}
+
+
+.home-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  color:
+    var(--text);
+
+  text-decoration: none;
+}
+
+
+.home-brand-logo {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  flex-shrink: 0;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 12px;
+
+  background: white;
+}
+
+
+.home-brand-logo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+
+  padding: 3px;
+}
+
+
+.home-brand-text {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+.home-brand-text strong {
+  font-size: 18px;
+
+  font-weight: 800;
+}
+
+
+.home-brand-text span {
+  color:
+    var(--text-muted);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing:
+    0.03em;
+}
+
+
+.home-nav-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+
+.login-link {
+  color:
+    var(--text);
+
+  text-decoration: none;
+
+  font-weight: 600;
+}
+
+
+.login-link:hover {
+  color:
+    var(--primary);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  max-width: 1280px;
+
+  margin: auto;
+
+  min-height: 650px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.15fr 0.85fr;
+
+  align-items: center;
+
+  gap: 80px;
+
+  padding:
+    60px 32px 80px;
+}
+
+
+.hero-content h1 {
+  max-width: 700px;
+
+  margin:
+    18px 0;
+
+  font-size:
+    clamp(
+      46px,
+      6vw,
+      76px
+    );
+
+  line-height: 1.02;
+
+  letter-spacing: -3px;
+}
+
+
+.hero-content h1 span {
+  color:
+    var(--primary);
+}
+
+
+.hero-content > p {
+  max-width: 620px;
+
+  color:
+    var(--text-muted);
+
+  font-size: 19px;
+
+  line-height: 1.7;
+}
+
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding:
+    8px 13px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(
+      37,
+      99,
+      235,
+      0.1
+    );
+
+  color:
+    var(--primary);
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+
+.hero-buttons {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+
+.hero-primary {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+.hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 24px;
+
+  margin-top: 30px;
+
+  color:
+    var(--text-muted);
+
+  font-size: 14px;
+}
+
+
+.hero-trust span {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+}
+
+
+/* =========================
+   DEMO CARD
+========================= */
+
+.hero-demo-card {
+  position: relative;
+
+  padding: 26px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 24px;
+
+  background:
+    var(--surface);
+
+  box-shadow:
+    0 30px 80px
+    rgba(
+      15,
+      23,
+      42,
+      0.12
+    );
+
+  transform:
+    rotate(1deg);
+}
+
+
+.demo-bank-label {
+  margin-bottom: 20px;
+
+  color:
+    var(--primary);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing:
+    0.13em;
+}
+
+
+.demo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 24px;
+}
+
+
+.demo-header h2 {
+  margin:
+    5px 0 0;
+
+  font-size: 34px;
+}
+
+
+.demo-avatar {
+  width: 46px;
+  height: 46px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background:
+    var(--primary);
+
+  color: white;
+
+  font-weight: 800;
+}
+
+
+.demo-account {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px;
+
+  margin-top: 12px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 14px;
+
+  background:
+    var(--surface-secondary);
+}
+
+
+.demo-account div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.demo-transactions {
+  margin-top: 24px;
+}
+
+
+.transaction-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding:
+    14px 0;
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+
+.transaction-row div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+  max-width: 1280px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 20px;
+
+  padding:
+    0 32px 90px;
+}
+
+
+.feature-card {
+  padding: 26px;
+}
+
+
+.feature-icon {
+  width: 46px;
+  height: 46px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 12px;
+
+  background:
+    rgba(
+      37,
+      99,
+      235,
+      0.1
+    );
+
+  color:
+    var(--primary);
+}
+
+
+.feature-card h3 {
+  margin:
+    18px 0 8px;
+}
+
+
+.feature-card p {
+  line-height: 1.6;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (
+  max-width: 900px
+) {
+
+  .hero {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+
+  .hero-demo-card {
+    transform: none;
+  }
+
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (
+  max-width: 600px
+) {
+
+  .home-nav {
+    padding:
+      0 18px;
+  }
+
+
+  .home-brand-logo {
+    width: 44px;
+    height: 44px;
+  }
+
+
+  .home-brand-text strong {
+    font-size: 15px;
+  }
+
+
+  .home-brand-text span {
+    display: none;
+  }
+
+
+  .home-nav-actions
+  .login-link {
+    display: none;
+  }
+
+
+  .hero {
+    padding:
+      40px 18px 60px;
+  }
+
+
+  .hero-content h1 {
+    letter-spacing: -2px;
+  }
+
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+
+  .hero-buttons
+  .btn {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+
+  .features {
+    padding:
+      0 18px 60px;
+  }
+
+}

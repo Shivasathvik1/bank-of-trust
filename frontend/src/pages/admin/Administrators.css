@@ -1,0 +1,655 @@
+/* =========================
+   PAGE
+========================= */
+
+.administrators-page {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.administrators-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+}
+
+
+.administrators-header h1 {
+  margin: 5px 0 8px;
+
+  font-size: 32px;
+}
+
+
+.administrators-header p {
+  margin-bottom: 0;
+}
+
+
+.administrators-eyebrow {
+  margin: 0;
+
+  color: var(--primary);
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+
+.add-admin-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================
+   SUMMARY
+========================= */
+
+.administrators-summary {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 18px;
+}
+
+
+.admin-summary-card {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 20px;
+}
+
+
+.admin-summary-icon {
+  width: 46px;
+  height: 46px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 13px;
+
+  color: var(--primary);
+
+  background:
+    rgba(37, 99, 235, 0.1);
+}
+
+
+.admin-summary-icon.active {
+  color: #16a34a;
+
+  background:
+    rgba(22, 163, 74, 0.1);
+}
+
+
+.admin-summary-icon.inactive {
+  color: #dc2626;
+
+  background:
+    rgba(220, 38, 38, 0.1);
+}
+
+
+.admin-summary-card h2 {
+  margin: 5px 0 0;
+
+  font-size: 24px;
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.administrators-error {
+  padding: 13px 15px;
+
+  border-radius: 10px;
+
+  color: var(--danger);
+
+  background:
+    rgba(220, 38, 38, 0.1);
+
+  border:
+    1px solid
+    rgba(220, 38, 38, 0.2);
+}
+
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.administrators-card {
+  overflow: hidden;
+}
+
+
+.administrators-card-header {
+  padding: 22px;
+
+  border-bottom:
+    1px solid
+    var(--border);
+}
+
+
+.administrators-card-header h2 {
+  margin: 0 0 5px;
+}
+
+
+.administrators-card-header p {
+  margin: 0;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.administrators-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+
+.administrators-table {
+  width: 100%;
+
+  min-width: 850px;
+
+  border-collapse: collapse;
+}
+
+
+.administrators-table th,
+.administrators-table td {
+  padding: 16px 22px;
+
+  text-align: left;
+
+  vertical-align: middle;
+
+  border-bottom:
+    1px solid
+    var(--border);
+}
+
+
+.administrators-table th {
+  color: var(--text-muted);
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.03em;
+
+  text-transform: uppercase;
+}
+
+
+.administrators-table td {
+  font-size: 13px;
+}
+
+
+.administrators-table
+tbody
+tr:last-child
+td {
+  border-bottom: none;
+}
+
+
+/* =========================
+   IDENTITY
+========================= */
+
+.administrator-identity {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+}
+
+
+.administrator-avatar {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  color: var(--primary);
+
+  background:
+    rgba(37, 99, 235, 0.1);
+
+  font-weight: 800;
+}
+
+
+.administrator-identity
+> div:last-child {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+
+.administrator-identity span {
+  font-size: 11px;
+}
+
+
+/* =========================
+   ROLE
+========================= */
+
+.administrator-role-badge {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  color: var(--primary);
+
+  background:
+    rgba(37, 99, 235, 0.1);
+
+  font-size: 11px;
+
+  font-weight: 800;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.administrator-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+
+  font-weight: 800;
+}
+
+
+.administrator-status-active {
+  color: #15803d;
+
+  background:
+    rgba(22, 163, 74, 0.12);
+}
+
+
+.administrator-status-inactive {
+  color: #dc2626;
+
+  background:
+    rgba(220, 38, 38, 0.1);
+}
+
+
+/* =========================
+   STATUS BUTTONS
+========================= */
+
+.admin-status-button {
+  min-width: 100px;
+
+  padding: 8px 12px;
+
+  border-radius: 9px;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+.admin-deactivate-button {
+  color: #dc2626;
+
+  border:
+    1px solid
+    rgba(220, 38, 38, 0.3);
+
+  background:
+    rgba(220, 38, 38, 0.06);
+}
+
+
+.admin-deactivate-button:hover {
+  background:
+    rgba(220, 38, 38, 0.12);
+}
+
+
+.admin-activate-button {
+  color: #15803d;
+
+  border:
+    1px solid
+    rgba(22, 163, 74, 0.3);
+
+  background:
+    rgba(22, 163, 74, 0.06);
+}
+
+
+.admin-activate-button:hover {
+  background:
+    rgba(22, 163, 74, 0.12);
+}
+
+
+.admin-status-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================
+   LOADING / EMPTY
+========================= */
+
+.administrators-loading,
+.administrators-empty {
+  padding: 45px;
+
+  text-align: center;
+
+  color: var(--text-muted);
+}
+
+
+/* =========================
+   MODAL BACKDROP
+========================= */
+
+.admin-modal-backdrop {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background:
+    rgba(0, 0, 0, 0.65);
+
+  backdrop-filter:
+    blur(4px);
+}
+
+
+/* =========================
+   CREATE MODAL
+========================= */
+
+.admin-create-modal {
+  width: 100%;
+
+  max-width: 480px;
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  padding: 26px;
+
+  border-radius: 18px;
+
+  background: var(--surface);
+
+  color: var(--text);
+
+  box-shadow:
+    0 25px 60px
+    rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================
+   MODAL HEADER
+========================= */
+
+.admin-create-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 20px;
+}
+
+
+.admin-create-modal-header h2 {
+  margin: 0 0 5px;
+
+  font-size: 22px;
+}
+
+
+.admin-create-modal-header p {
+  margin: 0;
+
+  font-size: 12px;
+}
+
+
+.admin-modal-close {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background:
+    var(--surface-secondary);
+
+  color: var(--text);
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.admin-create-modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.admin-create-modal label {
+  margin-top: 16px;
+  margin-bottom: 7px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+/* =========================
+   FORM ERROR
+========================= */
+
+.admin-create-error {
+  padding: 12px 14px;
+
+  border-radius: 10px;
+
+  color: var(--danger);
+
+  background:
+    rgba(220, 38, 38, 0.1);
+
+  border:
+    1px solid
+    rgba(220, 38, 38, 0.2);
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* =========================
+   MODAL ACTIONS
+========================= */
+
+.admin-create-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  margin-top: 24px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (
+  max-width: 1000px
+) {
+
+  .administrators-summary {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (
+  max-width: 700px
+) {
+
+  .administrators-header {
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+
+  .add-admin-button {
+    width: 100%;
+  }
+
+
+  .administrators-summary {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .administrators-header h1 {
+    font-size: 27px;
+  }
+
+
+  .admin-create-actions {
+    flex-direction:
+      column-reverse;
+  }
+
+
+  .admin-create-actions
+  .btn {
+    width: 100%;
+  }
+
+}

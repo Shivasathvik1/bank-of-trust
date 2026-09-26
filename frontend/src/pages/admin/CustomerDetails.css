@@ -1,0 +1,418 @@
+.customer-detail-page {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+
+/* BACK */
+
+.admin-detail-back {
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: var(--text-muted);
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+.admin-detail-back:hover {
+  color: var(--primary);
+}
+
+
+/* HEADER */
+
+.customer-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+
+.customer-detail-header h1 {
+  margin: 5px 0;
+
+  font-size: 32px;
+}
+
+
+.customer-detail-header p {
+  margin: 0;
+}
+
+
+.customer-detail-eyebrow {
+  color: var(--primary) !important;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+
+.customer-detail-status,
+.customer-account-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 12px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+
+  font-weight: 800;
+}
+
+
+.customer-detail-status.active,
+.customer-account-status.active {
+  color: #15803d;
+
+  background:
+    rgba(22, 163, 74, 0.12);
+}
+
+
+.customer-detail-status.inactive,
+.customer-account-status.inactive {
+  color: #dc2626;
+
+  background:
+    rgba(220, 38, 38, 0.1);
+}
+
+
+/* CUSTOMER INFO */
+
+.customer-info-card,
+.customer-bank-card {
+  padding: 24px;
+}
+
+
+.customer-detail-card-title {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+.customer-detail-card-title h2 {
+  margin: 0;
+
+  font-size: 18px;
+}
+
+
+.customer-info-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 18px;
+
+  margin-top: 24px;
+}
+
+
+.customer-info-item {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 16px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 12px;
+
+  background:
+    var(--surface-secondary);
+}
+
+
+.customer-info-icon {
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  color: var(--primary);
+
+  background:
+    rgba(37, 99, 235, 0.1);
+}
+
+
+.customer-info-item > div:last-child {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.customer-info-item span {
+  color: var(--text-muted);
+
+  font-size: 11px;
+}
+
+
+.customer-info-item strong {
+  overflow-wrap: anywhere;
+
+  font-size: 14px;
+}
+
+
+/* ACCOUNTS */
+
+.customer-bank-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 20px;
+}
+
+
+.customer-bank-header p {
+  margin:
+    6px 0 0;
+}
+
+
+.customer-account-count {
+  padding: 7px 11px;
+
+  border-radius: 999px;
+
+  color: var(--primary);
+
+  background:
+    rgba(37, 99, 235, 0.1);
+
+  font-size: 11px;
+
+  font-weight: 800;
+}
+
+
+.customer-accounts-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+
+.customer-account-row {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    auto minmax(160px, 1fr)
+    minmax(120px, auto)
+    auto auto;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 16px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 12px;
+
+  background:
+    transparent;
+
+  color: var(--text);
+
+  text-align: left;
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+.customer-account-row:hover {
+  background:
+    var(--surface-secondary);
+
+  border-color:
+    rgba(37, 99, 235, 0.35);
+}
+
+
+.customer-account-icon {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 11px;
+
+  color: var(--primary);
+
+  background:
+    rgba(37, 99, 235, 0.1);
+}
+
+
+.customer-account-main {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.customer-account-main span {
+  color: var(--text-muted);
+
+  font-size: 12px;
+}
+
+
+.customer-account-balance {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+
+  text-align: right;
+}
+
+
+.customer-account-balance span {
+  font-size: 10px;
+}
+
+
+.customer-account-balance strong {
+  font-size: 15px;
+}
+
+
+.customer-account-arrow {
+  color: var(--text-muted);
+}
+
+
+.customer-no-accounts,
+.admin-detail-message {
+  padding: 45px;
+
+  text-align: center;
+
+  color: var(--text-muted);
+}
+
+
+.admin-detail-error {
+  padding: 14px 16px;
+
+  border-radius: 10px;
+
+  color: var(--danger);
+
+  background:
+    rgba(220, 38, 38, 0.1);
+}
+
+
+/* MOBILE */
+
+@media (
+  max-width: 750px
+) {
+
+  .customer-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .customer-account-row {
+    grid-template-columns:
+      auto 1fr auto;
+  }
+
+
+  .customer-account-balance {
+    grid-column:
+      2 / 3;
+
+    text-align: left;
+  }
+
+
+  .customer-account-status {
+    grid-column:
+      2 / 3;
+  }
+
+
+  .customer-account-arrow {
+    grid-column: 3;
+
+    grid-row:
+      1 / span 3;
+  }
+
+}

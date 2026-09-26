@@ -1,0 +1,840 @@
+/* =========================
+   PAGE
+========================= */
+
+.account-details-page {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+
+/* =========================
+   BACK LINK
+========================= */
+
+.account-back-link {
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  color:
+    var(--text-muted);
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  transition:
+    color 0.2s ease;
+}
+
+
+.account-back-link:hover {
+  color:
+    var(--primary);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.account-details-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding: 28px;
+}
+
+
+.account-details-title {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+}
+
+
+.account-details-title-icon {
+  width: 54px;
+  height: 54px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 16px;
+
+  color:
+    var(--primary);
+
+  background:
+    rgba(37, 99, 235, 0.1);
+}
+
+
+.account-details-header h1 {
+  margin:
+    5px 0 11px;
+
+  font-size: 28px;
+}
+
+
+.account-details-eyebrow {
+  margin: 0;
+
+  color:
+    var(--primary);
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing:
+    0.08em;
+
+  text-transform:
+    uppercase;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.account-details-status {
+  display: inline-flex;
+  align-items: center;
+
+  padding:
+    5px 10px;
+
+  border-radius:
+    999px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing:
+    0.04em;
+}
+
+
+.account-detail-active {
+  color:
+    var(--success);
+
+  background:
+    rgba(22, 163, 74, 0.1);
+}
+
+
+.account-detail-disabled {
+  color:
+    var(--danger);
+
+  background:
+    rgba(220, 38, 38, 0.1);
+}
+
+
+/* =========================
+   BALANCE
+========================= */
+
+.account-detail-balance {
+  min-width: 230px;
+
+  text-align: right;
+}
+
+
+.account-detail-balance span {
+  font-size: 12px;
+}
+
+
+.account-detail-balance h2 {
+  margin:
+    6px 0 0;
+
+  font-size: 35px;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================
+   INFORMATION GRID
+========================= */
+
+.account-information-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(0, 1fr)
+    );
+
+  gap: 16px;
+}
+
+
+.account-info-card {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 18px;
+}
+
+
+.account-info-icon {
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  color:
+    var(--primary);
+
+  background:
+    rgba(37, 99, 235, 0.1);
+}
+
+
+.account-info-card > div:last-child {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+.account-info-card span {
+  font-size: 11px;
+}
+
+
+.account-info-card strong {
+  overflow-wrap: anywhere;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.account-detail-actions {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 14px;
+}
+
+
+.account-action-card {
+  min-height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding:
+    13px 18px;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius:
+    12px;
+
+  background:
+    var(--surface);
+
+  color:
+    var(--text);
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.account-action-card:hover:not(:disabled) {
+  color:
+    var(--primary);
+
+  border-color:
+    var(--primary);
+
+  transform:
+    translateY(-2px);
+}
+
+
+.account-action-card:disabled {
+  opacity: 0.45;
+
+  cursor:
+    not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================
+   BLOCKED/CLOSED MESSAGE
+========================= */
+
+.account-unavailable-message {
+  padding:
+    14px 16px;
+
+  border-radius:
+    10px;
+
+  color:
+    var(--danger);
+
+  background:
+    rgba(220, 38, 38, 0.08);
+
+  border:
+    1px solid
+    rgba(220, 38, 38, 0.18);
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   TRANSACTION CARD
+========================= */
+
+.account-transactions {
+  overflow: hidden;
+}
+
+
+.account-transactions-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 22px;
+
+  border-bottom:
+    1px solid
+    var(--border);
+}
+
+
+.account-transactions-heading h2 {
+  margin:
+    0 0 5px;
+
+  font-size: 20px;
+}
+
+
+.account-transactions-heading p {
+  margin: 0;
+
+  font-size: 12px;
+}
+
+
+/* =========================
+   TRANSACTION ITEM
+========================= */
+
+.account-transaction-item {
+  display: grid;
+
+  grid-template-columns:
+    auto
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding:
+    16px 22px;
+
+  border-bottom:
+    1px solid
+    var(--border);
+}
+
+
+.account-transaction-item:last-child {
+  border-bottom: none;
+}
+
+
+/* =========================
+   TRANSACTION ICON
+========================= */
+
+.account-transaction-icon {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius:
+    12px;
+}
+
+
+.account-credit-icon {
+  color:
+    var(--success);
+
+  background:
+    rgba(22, 163, 74, 0.1);
+}
+
+
+.account-debit-icon {
+  color:
+    var(--danger);
+
+  background:
+    rgba(220, 38, 38, 0.1);
+}
+
+
+/* =========================
+   TRANSACTION INFORMATION
+========================= */
+
+.account-transaction-info {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.account-transaction-info strong {
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  font-size: 14px;
+}
+
+
+.account-transaction-info span {
+  font-size: 11px;
+}
+
+
+.account-transaction-reference {
+  overflow: hidden;
+
+  color:
+    var(--text-muted);
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  font-size: 10px;
+}
+
+
+/* =========================
+   TRANSACTION AMOUNT
+========================= */
+
+.account-transaction-amount {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+
+  text-align: right;
+}
+
+
+.account-transaction-amount strong {
+  white-space: nowrap;
+
+  font-size: 14px;
+}
+
+
+.account-transaction-amount span {
+  font-size: 10px;
+}
+
+
+/* =========================
+   EMPTY
+========================= */
+
+.account-no-transactions {
+  padding: 45px;
+
+  text-align: center;
+
+  color:
+    var(--text-muted);
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   PAGINATION
+========================= */
+
+.account-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  padding: 20px;
+
+  border-top:
+    1px solid
+    var(--border);
+}
+
+
+.account-pagination span {
+  color:
+    var(--text-muted);
+
+  font-size: 12px;
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.account-details-loading {
+  padding: 30px;
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.account-details-error {
+  padding: 26px;
+
+  border-radius: 14px;
+
+  background:
+    var(--surface);
+
+  border:
+    1px solid
+    var(--border);
+}
+
+
+.account-details-error h3 {
+  margin-top: 0;
+}
+
+
+.account-details-error p {
+  margin-bottom: 20px;
+
+  color:
+    var(--text-muted);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (
+  max-width: 1100px
+) {
+
+  .account-information-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (
+  max-width: 700px
+) {
+
+  .account-details-header {
+    align-items:
+      flex-start;
+
+    flex-direction:
+      column;
+  }
+
+
+  .account-detail-balance {
+    min-width: 0;
+
+    text-align: left;
+  }
+
+
+  .account-detail-balance h2 {
+    font-size: 29px;
+  }
+
+
+  .account-information-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .account-detail-actions {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .account-transaction-item {
+    grid-template-columns:
+      auto
+      minmax(0, 1fr);
+  }
+
+
+  .account-transaction-amount {
+    grid-column:
+      2;
+
+    text-align: left;
+  }
+
+
+  .account-pagination {
+    gap: 10px;
+  }
+  /* =========================
+   TRANSACTION FILTERS
+========================= */
+
+.account-transaction-filters {
+  display: grid;
+
+  grid-template-columns:
+    minmax(170px, 1fr)
+    minmax(150px, 0.8fr)
+    minmax(150px, 0.8fr)
+    auto;
+
+  align-items: end;
+
+  gap: 14px;
+
+  padding: 20px 22px;
+
+  border-bottom:
+    1px solid var(--border);
+
+  background:
+    var(--surface-secondary);
+}
+
+
+.account-filter-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+
+  min-width: 0;
+}
+
+
+.account-filter-field label {
+  font-size: 12px;
+
+  font-weight: 700;
+
+  color:
+    var(--text-muted);
+}
+
+
+.account-filter-field
+.form-input {
+  width: 100%;
+}
+
+
+.account-filter-buttons {
+  display: flex;
+
+  gap: 8px;
+}
+
+
+.account-filter-buttons
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  min-height: 42px;
+}
+
+
+.account-filter-error {
+  margin:
+    16px 22px 0;
+
+  padding:
+    12px 14px;
+
+  border-radius: 10px;
+
+  color:
+    var(--danger);
+
+  background:
+    rgba(220, 38, 38, 0.08);
+
+  border:
+    1px solid
+    rgba(220, 38, 38, 0.18);
+}
+
+
+.account-transactions-loading {
+  padding: 45px;
+
+  text-align: center;
+
+  color:
+    var(--text-muted);
+}
+
+
+@media (
+  max-width: 1000px
+) {
+
+  .account-transaction-filters {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .account-filter-buttons {
+    align-self: end;
+  }
+
+}
+
+
+@media (
+  max-width: 650px
+) {
+
+  .account-transaction-filters {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .account-filter-buttons {
+    width: 100%;
+  }
+
+
+  .account-filter-buttons
+  .btn {
+    flex: 1;
+  }
+
+}
+
+}

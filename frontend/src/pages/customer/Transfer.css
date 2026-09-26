@@ -1,0 +1,506 @@
+* {
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.transfer-page {
+  width: 100%;
+
+  max-width: 1150px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 26px;
+
+  margin:
+    0 auto;
+}
+
+
+/* =========================
+   PAGE HEADING
+========================= */
+
+.transfer-heading h1 {
+  margin:
+    5px 0 8px;
+
+  font-size: 32px;
+}
+
+
+.transfer-heading p {
+  margin-bottom: 0;
+}
+
+
+.transfer-eyebrow {
+  margin: 0;
+
+  color:
+    var(--primary);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   PAGE GRID
+========================= */
+
+.transfer-layout {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.4fr)
+    minmax(280px, 0.6fr);
+
+  gap: 24px;
+
+  align-items: start;
+}
+
+
+/* =========================
+   FORM CARD
+========================= */
+
+.transfer-form-card {
+  min-width: 0;
+
+  padding: 28px;
+}
+
+
+.transfer-card-header {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 24px;
+}
+
+
+.transfer-card-header h2 {
+  margin:
+    0 0 4px;
+}
+
+
+.transfer-card-header p {
+  margin: 0;
+}
+
+
+.transfer-header-icon {
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 14px;
+
+  background:
+    rgba(37, 99, 235, 0.1);
+
+  color:
+    var(--primary);
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.transfer-form {
+  width: 100%;
+}
+
+
+.transfer-form label {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 18px;
+  margin-bottom: 7px;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+.transfer-form .form-input {
+  width: 100%;
+}
+
+
+.optional-label {
+  color:
+    var(--text-muted);
+
+  font-size: 11px;
+
+  font-weight: 500;
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+.transfer-description {
+  width: 100%;
+
+  resize: vertical;
+
+  min-height: 90px;
+}
+
+
+/* =========================
+   SELECTED ACCOUNT
+========================= */
+
+.selected-account-info {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 10px;
+
+  padding:
+    12px 14px;
+
+  border-radius: 10px;
+
+  background:
+    var(--surface-secondary);
+
+  border:
+    1px solid var(--border);
+}
+
+
+.selected-account-info div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+.selected-account-info span {
+  font-size: 11px;
+}
+
+
+/* =========================
+   AMOUNT INPUT
+========================= */
+
+.amount-input-wrapper {
+  position: relative;
+
+  width: 100%;
+}
+
+
+.amount-input-wrapper > span {
+  position: absolute;
+
+  top: 50%;
+
+  left: 18px;
+
+  z-index: 2;
+
+  transform:
+    translateY(-50%);
+
+  color:
+    var(--text-muted);
+
+  font-size: 16px;
+  font-weight: 600;
+
+  pointer-events: none;
+}
+
+
+.amount-input-wrapper .amount-input {
+  width: 100%;
+
+  padding-left:
+    42px !important;
+}
+
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.transfer-submit {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 26px;
+
+  padding:
+    13px 16px;
+}
+
+
+.transfer-submit:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================
+   MESSAGES
+========================= */
+
+.transfer-message {
+  padding:
+    13px 14px;
+
+  margin-bottom: 18px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+.transfer-error {
+  color:
+    var(--danger);
+
+  background:
+    rgba(220, 38, 38, 0.1);
+
+  border:
+    1px solid
+    rgba(220, 38, 38, 0.2);
+}
+
+
+.transfer-success {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color:
+    var(--success);
+
+  background:
+    rgba(22, 163, 74, 0.1);
+
+  border:
+    1px solid
+    rgba(22, 163, 74, 0.2);
+}
+
+
+/* =========================
+   SUMMARY CARD
+========================= */
+
+.transfer-summary {
+  min-width: 0;
+
+  position: sticky;
+
+  top: 95px;
+
+  padding: 24px;
+}
+
+
+.transfer-summary h3 {
+  margin:
+    0 0 24px;
+}
+
+
+/* =========================
+   SUMMARY ROWS
+========================= */
+
+.summary-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding:
+    12px 0;
+}
+
+
+.summary-row strong {
+  max-width: 65%;
+
+  text-align: right;
+
+  overflow-wrap: anywhere;
+}
+
+
+.summary-amount {
+  color:
+    var(--primary);
+
+  font-size: 18px;
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.summary-divider {
+  height: 1px;
+
+  margin:
+    10px 0;
+
+  background:
+    var(--border);
+}
+
+
+/* =========================
+   NOTE
+========================= */
+
+.summary-note {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 18px;
+
+  padding: 14px;
+
+  border-radius: 12px;
+
+  background:
+    rgba(37, 99, 235, 0.08);
+
+  color:
+    var(--primary);
+}
+
+
+.summary-note svg {
+  flex-shrink: 0;
+}
+
+
+.summary-note p {
+  margin: 0;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.transfer-loading {
+  padding: 30px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (
+  max-width: 900px
+) {
+
+  .transfer-layout {
+    grid-template-columns: 1fr;
+  }
+
+
+  .transfer-summary {
+    position: static;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (
+  max-width: 600px
+) {
+
+  .transfer-page {
+    gap: 20px;
+  }
+
+
+  .transfer-heading h1 {
+    font-size: 27px;
+  }
+
+
+  .transfer-form-card {
+    padding: 20px;
+  }
+
+
+  .transfer-card-header {
+    align-items: flex-start;
+  }
+
+
+  .transfer-header-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+
+  .summary-row {
+    gap: 12px;
+  }
+
+}

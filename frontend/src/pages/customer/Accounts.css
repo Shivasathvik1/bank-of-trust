@@ -1,0 +1,474 @@
+/* =========================
+   PAGE
+========================= */
+
+.accounts-page {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 26px;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.accounts-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+
+.accounts-heading h1 {
+  margin: 5px 0 8px;
+
+  font-size: 32px;
+}
+
+
+.accounts-heading p {
+  margin-bottom: 0;
+}
+
+
+.accounts-eyebrow {
+  margin: 0;
+
+  color:
+    var(--primary);
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing:
+    0.08em;
+
+  text-transform:
+    uppercase;
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.accounts-error {
+  padding:
+    13px 15px;
+
+  border-radius:
+    10px;
+
+  color:
+    var(--danger);
+
+  background:
+    rgba(220, 38, 38, 0.1);
+
+  border:
+    1px solid
+    rgba(220, 38, 38, 0.2);
+}
+
+
+/* =========================
+   SUMMARY
+========================= */
+
+.accounts-summary {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 18px;
+}
+
+
+.account-summary-card {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 20px;
+}
+
+
+.account-summary-icon {
+  width: 46px;
+  height: 46px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 13px;
+
+  color:
+    var(--primary);
+
+  background:
+    rgba(37, 99, 235, 0.1);
+}
+
+
+.account-summary-card h2 {
+  margin:
+    5px 0 0;
+
+  font-size: 23px;
+}
+
+
+/* =========================
+   ACCOUNT SECTION
+========================= */
+
+.accounts-list {
+  width: 100%;
+}
+
+
+.accounts-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 16px;
+}
+
+
+.accounts-section-title h2 {
+  margin:
+    0 0 5px;
+}
+
+
+.accounts-section-title p {
+  margin: 0;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.accounts-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 18px;
+}
+
+
+/* =========================
+   CLICKABLE LINK
+========================= */
+
+.account-details-link {
+  min-width: 0;
+
+  color: inherit;
+
+  text-decoration: none;
+}
+
+
+/* =========================
+   ACCOUNT CARD
+========================= */
+
+.full-account-card {
+  height: 100%;
+
+  min-width: 0;
+
+  padding: 22px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.account-details-link:hover
+.full-account-card {
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(37, 99, 235, 0.4);
+
+  box-shadow:
+    0 12px 30px
+    rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   CARD HEADER
+========================= */
+
+.full-account-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 24px;
+}
+
+
+.account-card-icon {
+  width: 44px;
+  height: 44px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 12px;
+
+  background:
+    rgba(37, 99, 235, 0.1);
+
+  color:
+    var(--primary);
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding:
+    5px 9px;
+
+  border-radius:
+    999px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing:
+    0.04em;
+}
+
+
+.status-active {
+  color:
+    var(--success);
+
+  background:
+    rgba(22, 163, 74, 0.1);
+}
+
+
+.status-disabled {
+  color:
+    var(--danger);
+
+  background:
+    rgba(220, 38, 38, 0.1);
+}
+
+
+/* =========================
+   ACCOUNT TYPE
+========================= */
+
+.full-account-type {
+  margin-bottom: 18px;
+}
+
+
+.full-account-type span {
+  font-size: 11px;
+}
+
+
+.full-account-type h3 {
+  margin:
+    4px 0 0;
+
+  font-size: 19px;
+}
+
+
+/* =========================
+   ACCOUNT NUMBER
+========================= */
+
+.full-account-number {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+
+  margin-bottom: 21px;
+}
+
+
+.full-account-number span {
+  font-size: 11px;
+}
+
+
+.full-account-number strong {
+  overflow-wrap: anywhere;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   BALANCE
+========================= */
+
+.full-account-balance {
+  margin-top: 10px;
+}
+
+
+.full-account-balance span {
+  font-size: 11px;
+}
+
+
+.full-account-balance h2 {
+  margin:
+    5px 0 0;
+
+  font-size: 25px;
+}
+
+
+/* =========================
+   VIEW DETAILS
+========================= */
+
+.account-view-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-top: 22px;
+
+  padding-top: 16px;
+
+  border-top:
+    1px solid
+    var(--border);
+
+  color:
+    var(--primary);
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+/* =========================
+   EMPTY
+========================= */
+
+.accounts-empty {
+  padding: 35px;
+
+  text-align: center;
+
+  color:
+    var(--text-muted);
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.accounts-loading {
+  padding: 30px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (
+  max-width: 1050px
+) {
+
+  .accounts-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .accounts-summary {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (
+  max-width: 650px
+) {
+
+  .accounts-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .accounts-summary {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .accounts-heading h1 {
+    font-size: 27px;
+  }
+
+}

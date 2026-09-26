@@ -2,11 +2,21 @@
 
 ### A Brighter Tomorrow
 
-Bank of Trust is a full-stack banking application built as a portfolio project to demonstrate practical Java, Spring Boot, Spring Security, REST API, database, testing, and React development skills.
+Bank of Trust is a full-stack banking application built as a portfolio project to demonstrate practical Java, Spring Boot, Spring Security, REST API, database, testing, deployment, and React development skills.
 
 The application supports both customer and administrator workflows, including secure authentication, account management, transfers, deposits, withdrawals, transaction history, customer administration, and account status management.
 
 > This project is for educational and portfolio purposes only. It is not a real banking service and should not be used for real financial transactions.
+
+---
+
+## Live Demo
+
+Frontend:  
+https://bank-of-trust.pages.dev
+
+Backend API:  
+https://bankoftrust.duckdns.org
 
 ---
 
@@ -49,7 +59,7 @@ The application supports both customer and administrator workflows, including se
 
 ### Backend
 
-- Java
+- Java 21
 - Spring Boot
 - Spring Security
 - JWT Authentication
@@ -72,6 +82,16 @@ The application supports both customer and administrator workflows, including se
 - Responsive UI
 - Light / Dark Theme
 
+### Deployment
+
+- Oracle Cloud Infrastructure
+- Oracle Linux
+- Nginx
+- Let's Encrypt / Certbot
+- Cloudflare Pages
+- systemd
+- MySQL
+
 ---
 
 ## Project Architecture
@@ -79,17 +99,23 @@ The application supports both customer and administrator workflows, including se
 The project follows a layered architecture.
 
 ```text
-Frontend
-   |
-   | HTTP / REST API
-   v
+React Frontend
+    |
+    | HTTPS / REST API
+    v
+Nginx Reverse Proxy
+    |
+    v
+Spring Boot Backend
+    |
+    v
 Controller
-   |
-   v
+    |
+    v
 Service
-   |
-   v
+    |
+    v
 Repository
-   |
-   v
+    |
+    v
 MySQL Database
